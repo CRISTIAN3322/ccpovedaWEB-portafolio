@@ -1,0 +1,61 @@
+/* * VARIBALES */
+
+:root {
+    --primary-color: #3182ed;
+    --text-color: #4f4f4f;
+    --bg-color: #e6e6e6;
+    --bg-card-color: #fafafa;
+}
+
+
+/* * CONFIGURACIÓN BASICA */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+
+/* * TEMA OSCURO */
+
+body.dark {
+    --text-color: #d4d4d4;
+    --bg-color: #262626;
+    --bg-card-color: #333333;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 75px;
+    padding: 0 1.5em;
+    background-color: var(--bg-card-color)
+}
+
+.switches {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.toggle-theme {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.toggle-theme__icon {
+    margin-right: 0.5em;
+    width: 20px;
+}
+
+.toggle-theme__text {
+    font-size: 0.8rem;
+}
