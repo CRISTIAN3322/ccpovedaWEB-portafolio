@@ -1,10 +1,11 @@
-/* * VARIBALES */
+/* * VARIABLES */
 
 :root {
     --primary-color: #3182ed;
     --text-color: #4f4f4f;
     --bg-color: #e6e6e6;
     --bg-card-color: #fafafa;
+    --transition: 0.3s, background-color 0.4s ease-in-out;
 }
 
 
@@ -18,26 +19,31 @@ body {
     margin: 0;
     background-color: var(--bg-color);
     color: var(--text-color);
+    transition: var(--transition);
 }
 
 
 /* * TEMA OSCURO */
-
+/* ? CLASE PARA EL MODO OSCURO */
 body.dark {
     --text-color: #d4d4d4;
     --bg-color: #262626;
     --bg-card-color: #333333;
 }
 
+/* * ESTILOS BASICOS DEL HEADER */
 .header {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     height: 75px;
     padding: 0 1.5em;
-    background-color: var(--bg-card-color)
+    background-color: var(--bg-card-color);
+    transition: var(--transition);
+    
 }
 
+/* ? BOTON MODO OSCURO */
 .switches {
     display: flex;
     align-items: center;
@@ -58,4 +64,41 @@ body.dark {
 
 .toggle-theme__text {
     font-size: 0.8rem;
+}
+
+/* ? CONTENEDOR DE LOS COLORES */
+.colors{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 20px;
+    width: 100px;
+}
+
+.colors__item{
+    width: 20px;
+    height: 20px;
+    border: 1px solid var(--text-color);
+    background-color: var(--primary-color);
+    cursor: pointer;    
+}
+
+.colors__item--blue{
+    --primary-color: #3182ed;
+}
+.colors__item--red{
+    --primary-color: #31ed8f;
+}
+.colors__item--green{
+    --primary-color: #a231ed;
+}
+.colors__item--yellow{
+    --primary-color: #edc131;
+}
+
+/* ? SECTION */
+.title{
+    text-align: center;
+    color: var(--primary-color);
+    transition: var(--transition);
 }
